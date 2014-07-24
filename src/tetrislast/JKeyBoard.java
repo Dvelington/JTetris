@@ -17,6 +17,11 @@ public class JKeyBoard extends KeyAdapter {
     
     JControll con;
     
+    public JKeyBoard(JFigGenerator gen)
+    {
+        con = gen._controll;
+    }
+    
     @Override
     public void keyPressed(KeyEvent e) {
         
