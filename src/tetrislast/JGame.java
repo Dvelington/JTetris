@@ -22,6 +22,7 @@ public class JGame extends JFrame {
     JField field;
     JFigGenerator gen;
     Timer time;
+    JKeyBoard key;
     int i=0;
     
     public JGame(){
@@ -31,6 +32,8 @@ public class JGame extends JFrame {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.field = new JField();
         gen = new JFigGenerator(field);
+        key = new JKeyBoard(gen);
+        addKeyListener(key);
         time = new Timer();
         time.schedule(gen, 10, 100);
     }
